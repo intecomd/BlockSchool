@@ -1,4 +1,8 @@
 {
-  "mongoDbUri": "mongodb://test:test@ds058579.mlab.com:58579/cs503",
-  "jwtSecret": "a secret phrase!!"
+  "mongoDbUri": "mongodb://admin:admin@ds123311.mlab.com:23311/block_school_users",
+  "jwtSecret": "a secret phrase!!",
+  "user": "mlab5620",
+  "password": "Mlab12345",
+  "email": "zhaoqi4290@gmail.com",
+  "emailPassword": "Zhaoqi473"
 }
