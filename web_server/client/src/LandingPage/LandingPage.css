@@ -1,0 +1,11 @@
+.center{
+    margin-left: 20px;
+    text-align:center;
+}
+.nav li{
+    display:inline;
+}
+.nav a{
+    display:inline-block;
+    padding:10px;
+}

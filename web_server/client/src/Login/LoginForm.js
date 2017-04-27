@@ -30,7 +30,7 @@ const LoginForm = ({
           <input type="submit" className="waves-effect waves-light btn cyan lighten-3" value='Log in'/>
         </div>
         <div className="row">
-          <p className="right-align"> New to Tap BlockSchool?  <a href="/signup"> Sign Up</a></p>
+          <p className="right-align"> New to BlockSchool?  <a href="/signup"> Sign Up</a></p>
         </div>
       </form>
     </div>
