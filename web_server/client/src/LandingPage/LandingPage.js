@@ -7,17 +7,7 @@ const LandingPage = ({ children }) => (
     <nav className="nav-bar cyan lighten-3">
       <div className="nav-wrapper">
         <a href="/" className="brand-logo">&nbsp;&nbsp;BlockSchool</a>
-        <ul id="nav-mobile" className="center">
-          <div >
-           <li><a>Mission</a></li>
 
-           <li><a>Teachers</a></li>
-           <li><a>Projects</a></li>
-           <li><a>FAQ</a></li>
-           <li><a>Start Now</a></li>
-
-      </div>
-        </ul>
         <ul id="nav-mobile" className="right">
           {Auth.isUserAuthenticated() ?
             (<div>
@@ -30,6 +20,15 @@ const LandingPage = ({ children }) => (
                <li><a href="/signup">Sign up</a></li>
              </div>)
           }
+        </ul>
+        <ul id="nav-mobile" className="right">
+          <div className="container-fluid">
+           <li><a>Mission</a></li>
+           <li><a>Teachers</a></li>
+           <li><a>Projects</a></li>
+           <li><a>FAQ</a></li>
+           <li><a>Start Now</a></li>
+         </div>
         </ul>
       </div>
     </nav>
