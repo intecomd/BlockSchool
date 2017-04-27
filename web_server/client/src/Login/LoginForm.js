@@ -1,5 +1,16 @@
 import React, {PropTypes} from 'react';
+import GoogleLogin from 'react-google-login';
+import FacebookLogin from 'react-facebook-login';
+
 import './LoginForm.css';
+
+const responseGoogle = (response) => {
+  console.log(response);
+}
+
+const responseFacebook = (response) => {
+  console.log(response);
+}
 
 const LoginForm = ({
   onSubmit,
@@ -33,6 +44,17 @@ const LoginForm = ({
           <p className="right-align"> New to Tap BlockSchool?  <a href="/signup"> Sign Up</a></p>
         </div>
       </form>
+      <GoogleLogin
+        clientId="658977310896-knrl3gka66fldh83dao2rhgbblmd4un9.apps.googleusercontent.com"
+        buttonText="LOGIN WITH GOOGLE"
+        onSuccess={responseGoogle}
+        onFailure={responseGoogle}/>
+      <FacebookLogin
+        appId="1088597931155576"
+        autoLoad={true}
+        fields="name,email,picture"
+        //onClick={componentClicked}
+        callback={responseFacebook} />,
     </div>
   </div>
 );
