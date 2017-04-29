@@ -61,7 +61,7 @@ const LoginForm = ({
             callback={responseFacebook}
             cssClass="loginBtn loginBtn--facebook"/>
         </div>
-      </form>
+      </form> 
     </div>
   </div>
 );
