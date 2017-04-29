@@ -6,8 +6,9 @@ const LandingPage = ({ children }) => (
   <div>
     <nav className="nav-bar cyan lighten-3">
       <div className="nav-wrapper">
-        <a href="/" className="brand-logo">&nbsp;&nbsp;BlockSchool</a>
-
+        <ul id="nav-mobile" className="align-left">
+          <a href="/" className="brand-logo">&nbsp;&nbsp;BlockSchool</a>
+        </ul>
         <ul id="nav-mobile" className="right">
           {Auth.isUserAuthenticated() ?
             (<div>

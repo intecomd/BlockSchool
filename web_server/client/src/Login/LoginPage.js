@@ -53,7 +53,7 @@ class LoginPage extends React.Component {
         response.json().then(function(json) {
           console.log(json);
           Auth.authenticateUser(json.token, email);
-          this.context.router.replace('/');
+          this.context.router.replace('/dashboard');
         }.bind(this));
 
       } else {
