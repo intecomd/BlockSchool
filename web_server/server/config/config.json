@@ -1,5 +1,5 @@
 {
-  "mongoDbUri": "mongodb://admin:admin@ds123311.mlab.com:23311/block_school_users",
+  "mongoDbUri": "mongodb://admin:admin@ds113841.mlab.com:13841/blockschool",
   "jwtSecret": "a secret phrase!!",
   "user": "mlab5620",
   "password": "Mlab12345",

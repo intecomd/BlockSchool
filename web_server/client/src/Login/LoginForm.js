@@ -1,6 +1,7 @@
 import React, {PropTypes} from 'react';
-import GoogleLogin from 'react-google-login';
+
 import FacebookLogin from 'react-facebook-login';
+import GoogleLogin from 'react-google-login';
 
 import './LoginForm.css';
 
@@ -43,18 +44,24 @@ const LoginForm = ({
         <div className="row">
           <p className="right-align"> New to BlockSchool?  <a href="/signup"> Sign Up</a></p>
         </div>
+        <div className="row center-align">
+          <GoogleLogin
+            clientId="658977310896-knrl3gka66fldh83dao2rhgbblmd4un9.apps.googleusercontent.com"
+            buttonText="Login with Google"
+            onSuccess={responseGoogle}
+            onFailure={responseGoogle}
+            offline={false}
+            className="loginBtn loginBtn--google"/>
+        </div>
+        <div className="row center-align">
+          <FacebookLogin
+            appId="1088597931155576"
+            autoLoad={false}
+            fields="name,email,picture"
+            callback={responseFacebook}
+            cssClass="loginBtn loginBtn--facebook"/>
+        </div>
       </form>
-      <GoogleLogin
-        clientId="658977310896-knrl3gka66fldh83dao2rhgbblmd4un9.apps.googleusercontent.com"
-        buttonText="LOGIN WITH GOOGLE"
-        onSuccess={responseGoogle}
-        onFailure={responseGoogle}/>
-      <FacebookLogin
-        appId="1088597931155576"
-        autoLoad={true}
-        fields="name,email,picture"
-        //onClick={componentClicked}
-        callback={responseFacebook} />,
     </div>
   </div>
 );

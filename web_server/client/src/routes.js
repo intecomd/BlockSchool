@@ -2,6 +2,7 @@ import LandingPage from './LandingPage/LandingPage';
 import App from './App/App';
 import LoginPage from './Login/LoginPage';
 import SignUpPage from './SignUp/SignUpPage';
+import DashBoardPage from './DashBoard/DashBoardPage';
 import Auth from './Auth/Auth';
 
 
@@ -29,6 +30,11 @@ const routes = {
     {
       path: '/signup',
       component: SignUpPage
+    },
+
+    {
+      path: '/dashboard',
+      component: DashBoardPage
     },
 
     {
