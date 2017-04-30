@@ -15,7 +15,7 @@ const routes = {
       path: '/',
       getComponent: (location, callback) => {
         if (Auth.isUserAuthenticated()) {
-          callback(null, App);
+          callback(null, DashBoardPage);
         } else {
           callback(null, LoginPage);
         }

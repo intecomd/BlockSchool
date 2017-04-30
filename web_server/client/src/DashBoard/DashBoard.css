@@ -7,10 +7,3 @@
   padding-left: 20px;
   color: red;
 }
-
-.button-collapse {
-   menuWidth: 300;
-   edge: 'right';
-   closeOnClick: true;
-   draggable: true;
-}

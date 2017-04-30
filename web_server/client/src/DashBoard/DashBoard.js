@@ -1,9 +1,12 @@
 import React, {PropTypes} from 'react';
+import $ from 'jquery';
 
 import logo from '../../public/BlockSchoolLogo.png';
 import 'materialize-css/dist/css/materialize.min.css';
 import 'materialize-css/dist/js/materialize.min.js';
 import './DashBoard.css';
+
+
 
 const LoginForm = ({
   user,
@@ -11,7 +14,8 @@ const LoginForm = ({
   <div className="nav-wrapper">
     <link href="http://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css"/>
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
-    <ul id="slide-out" className="side-nav fixed">
+    <div className="container"><a href="#" data-activates="nav-mobile" className="btn button-collapse top-nav full hide-on-large"><i className="material-icons">menu</i></a></div>
+    <ul id="nav-mobile" className="side-nav fixed">
       <li ><a href="/"><img className='logo' src={logo} alt='logo' width="200px"/></a></li>
       <div className="align-center">
         <li><br/><h5>&nbsp; &nbsp; Hello {user.email}</h5><br/></li>
@@ -24,7 +28,6 @@ const LoginForm = ({
       <li className="bold"><a href="/selfTest" className="waves-effect waves-teal">Self-Test</a></li>
       <li className="bold"><a href="/referal" className="waves-effect waves-teal">Referal</a></li>
     </ul>
-    <div className="container"><a href="#" data-activates="slide-out" className="button-collapse top-nav full hide-on-large"><i className="material-icons">menu</i></a></div>
   </div>
 );
 
