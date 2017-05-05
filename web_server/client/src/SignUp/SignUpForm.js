@@ -10,7 +10,36 @@ const SignUpForm = ({
   <div className="container">
     <div className="card-panel signup-panel">
       <form className="col s12" action="/" onSubmit={onSubmit}>
-        <h4 className="center-align">Sign Up</h4>
+        <h4 className="center-align">Free Trial Sign Up</h4>
+        {errors.summary && <div className="row"><p className="error-message">{errors.summary}</p></div>}
+        <div className="row">
+          <div className="input-field col s12">
+            <input id="firstName" type="text" name="firstName" className="validate" onChange={onChange}/>
+            <label htmlFor="firstName">Parent&apos;s First Name</label>
+          </div>
+        </div>
+        {errors.summary && <div className="row"><p className="error-message">{errors.summary}</p></div>}
+        <div className="row">
+          <div className="input-field col s12">
+            <input id="lastName" type="text" name="lastName" className="validate" onChange={onChange}/>
+            <label htmlFor="lastName">Parent&apos;s Last Name</label>
+          </div>
+        </div>
+        {errors.summary && <div className="row"><p className="error-message">{errors.summary}</p></div>}
+        <div className="row">
+          <div className="input-field col s12">
+            <input id="phone" type="text" name="phone" className="validate" onChange={onChange}/>
+            <label htmlFor="phone">Phone Number</label>
+          </div>
+        </div>
+        {errors.summary && <div className="row"><p className="error-message">{errors.summary}</p></div>}
+        <div className="row">
+          <div className="input-field col s12">
+            <input id="time" type="text" name="time" className="validate" onChange={onChange}/>
+            <label htmlFor="time">Best Contact Time</label>
+          </div>
+        </div>
+
         {errors.summary && <div className="row"><p className="error-message">{errors.summary}</p></div>}
         <div className="row">
           <div className="input-field col s12">
@@ -34,9 +63,6 @@ const SignUpForm = ({
         </div>
         <div className="row right-align">
           <input type="submit" className="waves-effect waves-light btn cyan lighten-3" value='Sign Up'/>
-        </div>
-        <div className="row">
-          <p className="right-align"> Already have an account? <a href="/login">Login</a></p>
         </div>
       </form>
     </div>

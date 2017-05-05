@@ -5,7 +5,6 @@
   "dependencies": {
     "materialize": "^1.0.0",
     "materialize-css": "^0.98.2",
-    "prop-types": "^15.5.8",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-facebook-login": "^3.5.0",
