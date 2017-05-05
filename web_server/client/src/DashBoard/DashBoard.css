@@ -7,3 +7,13 @@
   padding-left: 20px;
   color: red;
 }
+<<<<<<< HEAD
+=======
+
+.button-collapse {
+   menuWidth: 300;
+   edge: 'right';
+   closeOnClick: true;
+   draggable: true;
+}
+>>>>>>> intecomd

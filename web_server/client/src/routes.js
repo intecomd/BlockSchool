@@ -1,3 +1,4 @@
+import NavBar from './NavBar/NavBar';
 import LandingPage from './LandingPage/LandingPage';
 import App from './App/App';
 import LoginPage from './Login/LoginPage';
@@ -8,7 +9,7 @@ import Auth from './Auth/Auth';
 
 const routes = {
   // base component (wrapper for the whole application).
-  component: LandingPage,
+  component: NavBar,
   childRoutes: [
 
     {
@@ -17,7 +18,7 @@ const routes = {
         if (Auth.isUserAuthenticated()) {
           callback(null, DashBoardPage);
         } else {
-          callback(null, LoginPage);
+          callback(null, LandingPage);
         }
       }
     },

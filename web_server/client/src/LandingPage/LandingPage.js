@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { PropTypes } from 'react';
 import Auth from '../Auth/Auth';
 import './LandingPage.css';
@@ -43,3 +44,5 @@ LandingPage.propTypes = {
 };
 
 export default LandingPage;
+=======
+>>>>>>> intecomd

@@ -41,9 +41,25 @@ const LoginForm = ({
         <div className="row right-align">
           <input type="submit" className="waves-effect waves-light btn cyan lighten-3" value='Log in'/>
         </div>
-        <div className="row">
-          <p className="right-align"> New to BlockSchool?  <a href="/signup"> Sign Up</a></p>
+        
+        <div className="row center-align">
+          <GoogleLogin
+            clientId="658977310896-knrl3gka66fldh83dao2rhgbblmd4un9.apps.googleusercontent.com"
+            buttonText="Login with Google"
+            onSuccess={responseGoogle}
+            onFailure={responseGoogle}
+            offline={false}
+            className="loginBtn loginBtn--google"/>
         </div>
+        <div className="row center-align">
+          <FacebookLogin
+            appId="1088597931155576"
+            autoLoad={false}
+            fields="name,email,picture"
+            callback={responseFacebook}
+            cssClass="loginBtn loginBtn--facebook"/>
+        </div>
+<<<<<<< HEAD
         <div className="row center-align">
           <GoogleLogin
             clientId="658977310896-knrl3gka66fldh83dao2rhgbblmd4un9.apps.googleusercontent.com"
@@ -62,6 +78,9 @@ const LoginForm = ({
             cssClass="loginBtn loginBtn--facebook"/>
         </div>
       </form> 
+=======
+      </form>
+>>>>>>> intecomd
     </div>
   </div>
 );
