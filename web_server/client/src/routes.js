@@ -4,6 +4,7 @@ import App from './App/App';
 import LoginPage from './Login/LoginPage';
 import SignUpPage from './SignUp/SignUpPage';
 import DashBoardPage from './DashBoard/DashBoardPage';
+import Calendar from './Calendar/CalendarPage';
 import Auth from './Auth/Auth';
 
 
@@ -11,7 +12,6 @@ const routes = {
   // base component (wrapper for the whole application).
   component: NavBar,
   childRoutes: [
-
     {
       path: '/',
       getComponent: (location, callback) => {
@@ -29,6 +29,16 @@ const routes = {
     },
 
     {
+      path: '/logout',
+      onEnter: (nextState, replace) => {
+        Auth.deauthenticateUser();
+
+        // change the current URL to /
+        replace('/');
+      }
+    },
+
+    {
       path: '/signup',
       component: SignUpPage
     },
@@ -39,13 +49,8 @@ const routes = {
     },
 
     {
-      path: '/logout',
-      onEnter: (nextState, replace) => {
-        Auth.deauthenticateUser();
-
-        // change the current URL to /
-        replace('/');
-      }
+      path: '/bookCourses',
+      component: CalendarPage
     }
   ]
 };
