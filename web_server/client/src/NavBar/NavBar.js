@@ -16,21 +16,22 @@ const NavBar = ({ children }) => (
         <ul id="nav-mobile" className="right">
           {Auth.isUserAuthenticated() ?
             (<div>
-               <li>{Auth.getEmail().toUpperCase()}</li>
+
                <li><a href="/logout">LOG OUT</a></li>
              </div>)
              :
             (<div>
-               <li><a href="/signup">START NOW</a></li>
+
                <li><a href="/login">LOG IN</a></li>
              </div>)
           }
         </ul>
         <ul id="nav-mobile" className="right">
           <div className="container-fluid">
-           <li><a>HOW IT WORKS</a></li>
-           <li><a>PROJECTS</a></li>
-           <li><a>ABOUT US</a></li>
+           <li><a href="/">HOME</a></li>
+           <li><a href="/signup">FREE TRIAL</a></li>
+           <li><a>REFER</a></li>
+           <li><a href="/buy">BUY</a></li>
          </div>
         </ul>
       </div>

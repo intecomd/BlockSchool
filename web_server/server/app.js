@@ -8,7 +8,12 @@ var path = require('path');
 var index = require('./routes/index');
 var auth = require('./routes/auth');
 
+// Set your secret key: remember to change this to your live secret key in production
+// See your keys here: https://dashboard.stripe.com/account/apikeys
+var stripe = require("stripe")("sk_test_xOAbR4gWgrFR4NqlJ79vMW9u");
+
 var app = express();
+
 
 var config = require('./config/config.json');
 require('./models/main.js').connect(config.mongoDbUri);
@@ -21,6 +26,7 @@ app.use('/static', express.static(path.join(__dirname, '../client/build/static/'
 // TODO: remove this after development is done
 app.use(cors());
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: false}));
 
 // load passport strategies
 app.use(passport.initialize());
@@ -34,6 +40,23 @@ const authCheckMiddleware = require('./middleware/auth_checker');
 
 app.use('/', index);
 app.use('/auth', auth);
+app.use('/charge', function(req, res) {
+  // Token is created using Stripe.js or Checkout!
+// Get the payment token submitted by the form:
+  var token = request.body.stripeToken;
+  // Charge the user's card:
+  var charge = stripe.charges.create({
+    amount: 1000,
+    currency: "usd",
+    description: "Example charge",
+    source: token,
+  }, function(err, charge) {
+    // asynchronously called
+  });
+});
+
+
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -41,5 +64,12 @@ app.use(function(req, res, next) {
   err.status = 404;
   res.send('404 Not Found');
 });
+
+/*app.use('/buy', function(req, res) {
+  res.render('buy', {
+  });
+}); */
+
+
 
 module.exports = app;

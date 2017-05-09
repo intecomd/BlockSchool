@@ -4,15 +4,15 @@ import 'materialize-css/dist/js/materialize.min.js';
 import React from 'react';
 import logo from '../../public/BlockSchoolLogo.png';
 import './App.css';
+import LandingPage from '../LandingPage/LandingPage.js';
 
 
 class App extends React.Component{
   render() {
     return(
       <div>
-        <img className='logo' src={logo} alt='logo'/>
         <div className='container'>
-
+           <LandingPage />
         </div>
       </div>
     );

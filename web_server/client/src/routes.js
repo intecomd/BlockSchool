@@ -4,6 +4,7 @@ import App from './App/App';
 import LoginPage from './Login/LoginPage';
 import SignUpPage from './SignUp/SignUpPage';
 import DashBoardPage from './DashBoard/DashBoardPage';
+import Payments from './Payments/Payments';
 import Auth from './Auth/Auth';
 
 
@@ -18,7 +19,7 @@ const routes = {
         if (Auth.isUserAuthenticated()) {
           callback(null, DashBoardPage);
         } else {
-          callback(null, LandingPage);
+          callback(null, App);
         }
       }
     },
@@ -46,6 +47,10 @@ const routes = {
         // change the current URL to /
         replace('/');
       }
+    },
+    {
+      path: '/buy',
+      component: Payments
     }
   ]
 };

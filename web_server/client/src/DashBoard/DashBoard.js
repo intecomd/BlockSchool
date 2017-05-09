@@ -6,7 +6,7 @@ import 'materialize-css/dist/css/materialize.min.css';
 import 'materialize-css/dist/js/materialize.min.js';
 import './DashBoard.css';
 
-const LoginForm = ({
+const DashBoard = ({
   user,
 }) => (
   <div className="nav-wrapper">
@@ -29,8 +29,8 @@ const LoginForm = ({
   </div>
 );
 
-LoginForm.propTypes = {
+DashBoard.propTypes = {
    user: PropTypes.object.isRequired
 };
 
-export default LoginForm;
+export default DashBoard;
