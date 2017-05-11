@@ -7,31 +7,30 @@ const NavBar = ({ children }) => (
   <div className="background">
   <div>
 
-    <nav className="nav-bar cyan lighten-3">
+    <nav className="nav-bar white">
       <div className="nav-wrapper">
         <ul id="nav-mobile" className="align-left">
-
-        <a href="/" className="brand-logo">&nbsp;&nbsp;BlockSchool</a>
+        <img className="logo" src={logo} />
         </ul>
         <ul id="nav-mobile" className="right">
           {Auth.isUserAuthenticated() ?
             (<div>
 
-               <li><a href="/logout">LOG OUT</a></li>
+               <li><a href="/logout">Log out</a></li>
              </div>)
              :
             (<div>
 
-               <li><a href="/login">LOG IN</a></li>
+               <li><a href="/login">Log in</a></li>
              </div>)
           }
         </ul>
-        <ul id="nav-mobile" className="right">
+        <ul id="nav-mobile" className="left">
           <div className="container-fluid">
-           <li><a href="/">HOME</a></li>
-           <li><a href="/signup">FREE TRIAL</a></li>
-           <li><a>REFER</a></li>
-           <li><a href="/buy">BUY</a></li>
+           <li><a href="/">Home</a></li>
+           <li><a href="/signup">Free &nbsp;&nbsp;Trial</a></li>
+           <li><a>Refer</a></li>
+           <li><a href="/buy">Buy</a></li>
          </div>
         </ul>
       </div>

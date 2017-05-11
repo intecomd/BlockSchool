@@ -1,3 +1,25 @@
+#colorstrip{
+    margin-top: -22px;
+    width: 100%; height: 200px;
+    border-style: solid;
+    border-color: #FFCF00;
+    background-color: #FFCF00;
+}
+
+#position {
+  margin-left: 450px;
+  margin-top: 80px;
+  font-size: 40px;
+}
+
+#fun{
+  color: red;
+}
+
+#code{
+  color: green;
+}
+
 #pay {
    background: #1898c8;
    height:55px;

@@ -2,6 +2,8 @@ import React, { PropTypes } from 'react';
 import './Payments.css';
 
 const Payments = ({ onSubmit }) => (
+  <div id="colorstrip">
+   <p id="position">Play <span id="fun">fun</span> with <span id="code">code</span> in Block School</p>
   <form action="/charge" method="post" >
     <script
     src="https://checkout.stripe.com/checkout.js"
@@ -15,6 +17,7 @@ const Payments = ({ onSubmit }) => (
     </script>
 
   </form>
+  </div>
 );
 
 Payments.propTypes = {
