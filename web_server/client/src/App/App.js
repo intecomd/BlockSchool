@@ -5,14 +5,20 @@ import React from 'react';
 import logo from '../../public/BlockSchoolLogo.png';
 import './App.css';
 
+import DashBoardPage from '../DashBoard/DashBoardPage';
+import CalendarPage from '../Calendar/CalendarPage';
 
 class App extends React.Component{
   render() {
     return(
       <div>
-        <img className='logo' src={logo} alt='logo'/>
-        <div className='container'>
-
+        <div className='container row'>
+          <div className="col s4">
+            <DashBoardPage />
+          </div>
+          <div className="col s8">
+            <CalendarPage />
+          </div>
         </div>
       </div>
     );

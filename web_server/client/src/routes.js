@@ -3,8 +3,6 @@ import LandingPage from './LandingPage/LandingPage';
 import App from './App/App';
 import LoginPage from './Login/LoginPage';
 import SignUpPage from './SignUp/SignUpPage';
-import DashBoardPage from './DashBoard/DashBoardPage';
-import Calendar from './Calendar/CalendarPage';
 import Auth from './Auth/Auth';
 
 
@@ -16,7 +14,7 @@ const routes = {
       path: '/',
       getComponent: (location, callback) => {
         if (Auth.isUserAuthenticated()) {
-          callback(null, DashBoardPage);
+          callback(null, App);
         } else {
           callback(null, LandingPage);
         }
@@ -41,16 +39,6 @@ const routes = {
     {
       path: '/signup',
       component: SignUpPage
-    },
-
-    {
-      path: '/dashboard',
-      component: DashBoardPage
-    },
-
-    {
-      path: '/bookCourses',
-      component: CalendarPage
     }
   ]
 };

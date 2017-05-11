@@ -1,7 +1,13 @@
 import React, {PropTypes} from 'react';
 
 import Auth from '../Auth/Auth';
-import Calendar from './Calendar';
+//import Calendar from './Calendar';
+
+import $ from 'jquery';
+import 'fullcalendar/dist/fullcalendar.css';
+import 'jquery/dist/jquery.min.js';
+import 'moment/min/moment.min.js';
+import 'fullcalendar/dist/fullcalendar.js';
 
 class CalendarPage extends React.Component {
 
@@ -18,11 +24,16 @@ class CalendarPage extends React.Component {
     };
   }
 
+  componentDidMount(){
+    const {calendar} = this.refs;
+
+    $(calendar).fullCalendar();
+  }
+
   render() {
     return (
-      <Calendar
-        user={this.state.user}
-      />
+      <div ref="calendar">
+      </div>
     );
   }
 }
