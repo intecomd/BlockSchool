@@ -4,7 +4,8 @@ import './NavBar.css';
 import logo from '../../public/BlockSchoolLogo.png';
 
 const NavBar = ({ children }) => (
-  <div className="background">
+
+<div className="background">
   <div>
 
     <nav className="nav-bar white">
@@ -39,7 +40,7 @@ const NavBar = ({ children }) => (
     <br/>
     {children}
   </div>
-  </div>
+</div>
 );
 
 NavBar.propTypes = {

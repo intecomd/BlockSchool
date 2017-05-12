@@ -2,8 +2,129 @@
    background: #1898c8;
    height:55px;
    width:250px;
-   margin: 500px 400px;
+   margin-top: 500px;
+   margin-left: 400px;
    position:relative;
    border-radius: 10px;
    font-size: 19px;
+}
+
+.aboutYou {
+
+margin-top: 140px;
+margin-bottom: 100px;
+margin-left: -215px;
+  height: 50px;
+  width: 300px;
+}
+
+#background2 {
+  background-image:  url(../../public/bg2.png);
+  background-size: cover;
+  background-repeat:   no-repeat;
+  -webkit-filter: blur(5px);
+   filter: blur(5px);
+  width: 100%;
+  height: 750px;
+  margin-top: -70px;
+  margin-left: -215px;
+  margin-right: -100px;
+
+}
+
+.aboutBlock {
+
+margin-top: 80px;
+margin-bottom: 100px;
+margin-left: -215px;
+  height: 50px;
+  width: 300px;
+}
+
+#background3 {
+  background-image:  url(../../public/bg3.png);
+  background-size: cover;
+  background-repeat:   no-repeat;
+  -webkit-filter: blur(5px);
+   filter: blur(5px);
+  width: 100%;
+  height: 750px;
+  margin-top: -70px;
+  margin-left: -215px;
+  margin-right: -100px;
+
+}
+
+.aboutTeacher {
+
+margin-top: 80px;
+margin-bottom: 100px;
+margin-left: -215px;
+  height: 50px;
+  width: 300px;
+}
+
+#background4 {
+  background-image:  url(../../public/bg4.png);
+  background-size: cover;
+  background-repeat:   no-repeat;
+  -webkit-filter: blur(5px);
+   filter: blur(5px);
+  width: 100%;
+  height: 750px;
+  margin-top: -70px;
+  margin-left: -215px;
+  margin-right: -100px;
+
+}
+
+.aboutProject {
+
+margin-top: 80px;
+margin-bottom: 100px;
+margin-left: -215px;
+  height: 50px;
+  width: 300px;
+}
+
+#background5 {
+  background-image:  url(../../public/bg5.png);
+  background-size: cover;
+  background-repeat:   no-repeat;
+  -webkit-filter: blur(5px);
+   filter: blur(5px);
+  width: 100%;
+  height: 750px;
+  margin-top: -70px;
+  margin-left: -215px;
+  margin-right: -100px;
+
+}
+
+.aboutPrice {
+
+margin-top: 80px;
+margin-bottom: 100px;
+margin-left: -215px;
+  height: 50px;
+  width: 300px;
+}
+
+#background6 {
+  background-image:  url(../../public/bg6.png);
+  background-size: cover;
+  background-repeat:   no-repeat;
+  -webkit-filter: blur(5px);
+   filter: blur(5px);
+  width: 100%;
+  height: 750px;
+  margin-top: -70px;
+  margin-left: -215px;
+  margin-right: -100px;
+
+}
+
+.bg2 {
+  width: 100%;
+  margin-left: -200px;
 }
