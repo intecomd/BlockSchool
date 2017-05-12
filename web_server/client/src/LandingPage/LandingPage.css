@@ -1,12 +1,45 @@
+.box {
+    width: 900px;
+    height: 200px;
+    border: 1px solid red;
+    padding: 25px;
+    margin: 200px 60px;
+    text-align: center;
+}
+
+.line1 {
+  color: white;
+}
+
+.line2 {
+  color: white;
+}
+
+.color1 {
+  color: blue;
+}
+
+.color2 {
+  color: yellow;
+}
+
+.color3 {
+  color: orange;
+}
+
+.color4 {
+  color: red;
+}
+
 #button {
    background: #1898c8;
-   height:55px;
-   width:250px;
-   margin-top: 500px;
-   margin-left: 400px;
+   height:60px;
+   width:300px;
+   margin-top: -150px;
+   margin-left: 350px;
    position:relative;
    border-radius: 10px;
-   font-size: 19px;
+   font-size: 21px;
 }
 
 .aboutYou {
@@ -22,14 +55,11 @@ margin-left: -215px;
   background-image:  url(../../public/bg2.png);
   background-size: cover;
   background-repeat:   no-repeat;
-  -webkit-filter: blur(5px);
-   filter: blur(5px);
-  width: 100%;
+  width: auto;
   height: 750px;
   margin-top: -70px;
   margin-left: -215px;
-  margin-right: -100px;
-
+  margin-right: -215px;
 }
 
 .aboutBlock {
@@ -43,16 +73,15 @@ margin-left: -215px;
 
 #background3 {
   background-image:  url(../../public/bg3.png);
-  background-size: cover;
-  background-repeat:   no-repeat;
   -webkit-filter: blur(5px);
    filter: blur(5px);
-  width: 100%;
+  background-size: cover;
+  background-repeat:   no-repeat;
+  width: auto;
   height: 750px;
   margin-top: -70px;
   margin-left: -215px;
-  margin-right: -100px;
-
+  margin-right: -215px;
 }
 
 .aboutTeacher {
@@ -70,12 +99,11 @@ margin-left: -215px;
   background-repeat:   no-repeat;
   -webkit-filter: blur(5px);
    filter: blur(5px);
-  width: 100%;
-  height: 750px;
-  margin-top: -70px;
-  margin-left: -215px;
-  margin-right: -100px;
-
+   width: auto;
+   height: 750px;
+   margin-top: -70px;
+   margin-left: -215px;
+   margin-right: -215px;
 }
 
 .aboutProject {
@@ -93,12 +121,11 @@ margin-left: -215px;
   background-repeat:   no-repeat;
   -webkit-filter: blur(5px);
    filter: blur(5px);
-  width: 100%;
-  height: 750px;
-  margin-top: -70px;
-  margin-left: -215px;
-  margin-right: -100px;
-
+   width: auto;
+   height: 750px;
+   margin-top: -70px;
+   margin-left: -215px;
+   margin-right: -215px;
 }
 
 .aboutPrice {
@@ -116,12 +143,45 @@ margin-left: -215px;
   background-repeat:   no-repeat;
   -webkit-filter: blur(5px);
    filter: blur(5px);
-  width: 100%;
-  height: 750px;
-  margin-top: -70px;
-  margin-left: -215px;
-  margin-right: -100px;
+   width: auto;
+   height: 750px;
+   margin-top: -70px;
+   margin-left: -215px;
+   margin-right: -215px;
+}
 
+#colorstrip1{
+    margin-top: 0px;
+    width: auto;
+    height: 750px;
+    margin-top: 0px;
+    margin-left: -215px;
+    margin-right: -215px;
+    height: 250px;
+    border-style: solid;
+    border-color: #232123;
+    background-color: #232123;
+}
+
+.footer {
+    margin-top: 50px;
+
+}
+
+.footer li{
+    margin-left: 148px;
+    display:inline;
+}
+.footer li a{
+    display:inline-block;
+    padding:10px;
+    font-size: 34px;
+    color: white;
+}
+.copyright {
+  margin-top: -100px;
+  margin-left: 290px;
+  color: white;
 }
 
 .bg2 {

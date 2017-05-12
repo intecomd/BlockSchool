@@ -13,8 +13,12 @@ import aboutPrice from "../../public/aboutprice.png";
 const LandingPage = ({ onSubmit }) => (
 
 <div>
-  <div id="page1">
+  <div className="box">
+   <h3 className="line1">PRIVATE. <span className="color1">CR</span><span className="color2">EA</span><span className="color3">TI</span><span className="color4">VE</span> CODING</h3>
+   <h3 className="line2">LIVING TUTORING FOR KIDS AGE 4-14</h3>
+  </div>
 
+  <div id="page1">
   <a id="about" class="smooth"></a>
   <form action="/signup" onSubmit={onSubmit}>
     <button type="submit" className="btn btn-primary" id="button">Free Trial</button>
@@ -83,6 +87,21 @@ const LandingPage = ({ onSubmit }) => (
     <a id="contact" class="smooth"></a>
       Contact page content goes here.
    </div>
+   </div>
+
+   <div id="colorstrip1">
+   <ul className="footer">
+     <div className="container-fluid">
+      <li><a href="/login">Log in</a></li>
+      <li><a href="#">FAQ</a></li>
+      <li><a href="#">About us</a></li>
+      <li><a href="#">Contact</a></li>
+    </div>
+   </ul>
+   </div>
+
+   <div className="copyright">
+     <h4>Copyright 2017, Block School.</h4>
    </div>
 </div>
 );
