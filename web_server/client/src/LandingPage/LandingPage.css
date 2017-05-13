@@ -141,13 +141,132 @@ margin-left: -215px;
   background-image:  url(../../public/bg6.png);
   background-size: cover;
   background-repeat:   no-repeat;
-  -webkit-filter: blur(5px);
-   filter: blur(5px);
    width: auto;
-   height: 750px;
-   margin-top: -70px;
+   height:1130px;
+   margin-top: -100px;
    margin-left: -215px;
    margin-right: -215px;
+}
+
+#price {
+  font-size: 55px;
+  color: white;
+  margin-left: 600px;
+  margin-top: 60px;
+}
+
+#priceline1 {
+  font-size: 45px;
+  color: white;
+  margin-left: 200px;
+  margin-top: -60px;
+}
+
+#priceline2 {
+  font-size: 45px;
+  color: white;
+  margin-left: 200px;
+  margin-top: -60px;
+}
+
+.price li {
+    margin-left: 148px;
+    display:inline;
+}
+
+.price li #price1 {
+    display: inline-block;
+    padding:10px;
+    float:left;
+    margin-left: 90px;
+    margin-top: 10px;
+    width: 380px;
+    height: 500px;
+
+}
+
+.price li #price2 {
+  display: inline-block;
+  padding:10px;
+  float:left;
+  margin-left: 50px;
+  margin-top: 10px;
+  width: 380px;
+  height: 500px;
+}
+
+.price li #price3 {
+  display: inline-block;
+  padding:10px;
+  float:left;
+  margin-left: 50px;
+  margin-top: -12px;
+  width: 380px;
+  height: 500px;
+}
+
+.priceButton li {
+    display:inline;
+}
+
+.priceButton li #priceButton1 {
+    display: inline-block;
+    padding:10px;
+    float:left;
+    margin-left: 220px;
+    margin-top: 50px;
+    width: 120px;
+    height: 40px;
+    background-color: rgb(218,177,26);
+}
+
+.priceButton li #priceButton2 {
+    display: inline-block;
+    padding:10px;
+    float:left;
+    margin-left: 320px;
+    margin-top: 50px;
+    width: 120px;
+    height: 40px;
+    background-color: rgb(218,177,26);
+}
+
+.priceButton li #priceButton3 {
+    display: inline-block;
+    padding:10px;
+    margin-left: 320px;
+    margin-top: 50px;
+    width: 120px;
+    height: 40px;
+    background-color: rgb(218,177,26);
+}
+
+#priceline3 {
+  font-size: 52px;
+  color: white;
+  text-align: center;
+  margin-top: 0px;
+}
+
+#priceline4 {
+  font-size: 52px;
+  color: white;
+  text-align: center;
+  margin-top: -75px;
+}
+
+#priceline5 {
+  font-size: 52px;
+  color: white;
+  text-align: center;
+  margin-top: -75px;
+}
+
+#priceline6 {
+  font-size: 52px;
+  color: white;
+  text-align: center;
+  margin-top: -75px;
 }
 
 #colorstrip1{
