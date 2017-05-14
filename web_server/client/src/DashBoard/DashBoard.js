@@ -1,5 +1,5 @@
 import React, {PropTypes} from 'react';
-
+import { Link } from 'react-router';
 import logo from '../../public/BlockSchoolLogo.png';
 import 'materialize-css/dist/css/materialize.min.css';
 import 'materialize-css/dist/js/materialize.min.js';
@@ -14,13 +14,13 @@ const DashBoard = ({
       <div className="align-center">
         <br/><h5>&nbsp; &nbsp; Hello {user.email}</h5><br/>
       </div>
-      <a href="/profile" className="collection-item">Profile</a>
-      <a href="/bookCourses" className="collection-item">Book Courses</a>
-      <a href="/preparation" className="collection-item">Preparation</a>
-      <a href="/completedCourses" className="collection-item">Completed Courses</a>
-      <a href="/myTeachers" className="collection-item">My Teachers</a>
-      <a href="/selfTest" className="collection-item">Self-Test</a>
-      <a href="/referal" className="collection-item">Referal</a>
+      <Link to="/app" className="collection-item">Profile</Link>
+      <Link to="/app/calendar" className="collection-item">Calendar</Link>
+      <Link to="/app/preparation" className="collection-item">Preparation</Link>
+      <Link to="/app/completed-courses" className="collection-item">Completed Courses</Link>
+      <Link to="/app/my-teachers" className="collection-item">My Teachers</Link>
+      <Link to="/app/self-test" className="collection-item">Self-Test</Link>
+      <Link to="/app/referal" className="collection-item">Referal</Link>
     </div>
   </div>
 );

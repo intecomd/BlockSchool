@@ -6,18 +6,18 @@ import logo from '../../public/BlockSchoolLogo.png';
 import './App.css';
 
 import DashBoardPage from '../DashBoard/DashBoardPage';
-import CalendarPage from '../Calendar/CalendarPage';
+import Calendar from '../Components/Calendar/Calendar';
 
 class App extends React.Component{
   render() {
     return(
       <div>
-        <div className='container row'>
+        <div className='row'>
           <div className="col s4">
             <DashBoardPage />
           </div>
-          <div className="col s8">
-            <CalendarPage />
+          <div className="col s8 center-align">
+            {this.props.children}
           </div>
         </div>
       </div>

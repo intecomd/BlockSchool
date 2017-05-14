@@ -21,7 +21,7 @@ const LoginForm = ({
 }) => (
   <div className="container">
     <div className="card-panel login-panel">
-      <form className="col s12" action="/" onSubmit={onSubmit}>
+      <form className="col s12" action="/app" onSubmit={onSubmit}>
         <h4 className="center-align">Login</h4>
         {errors.summary && <div className="row"><p className="error-message">{errors.summary}</p></div>}
         <div className="row">
