@@ -31,7 +31,16 @@ const LandingPage = ({ onSubmit }) => (
   </div>
 
   <div id="background2">
+  <div className="layer">
   <div id="page2">
+  <p id="you1">	&#183;Knowing coding is the language of the 21st  </p>
+  <p id="you2">century, but hard to find the incredible</p>
+  <p  id="you3">class with great teachers in your area to </p>
+  <p  id="you4">get started?</p>
+  <p  id="you5">&#183;Never thought of getting 1-on-1 coding </p>
+  <p  id="you6">instruction because of the crazy price? </p>
+  <p  id="you7">Then ...... </p>
+  </div>
   </div>
   </div>
 
@@ -40,7 +49,14 @@ const LandingPage = ({ onSubmit }) => (
    </div>
 
    <div id="background3">
+   <div className="layer1">
    <div id="page5">
+   <p id="block1">Children love blocks. Blocks help children imagine and create. </p>
+   <p id="block2">This is why BlockSchool''s central concept is block. </p>
+   <p  id="block3">To build with blocks, kids write code in a Scratch-like visual </p>
+   <p  id="block4">programming language call Puzzle. This empowered them to </p>
+   <p  id="block5">build whatever they want (and a lot faster than LEGOs). </p>
+   </div>
    </div>
    </div>
 
@@ -49,7 +65,11 @@ const LandingPage = ({ onSubmit }) => (
    </div>
 
    <div id="background4">
+   <div className="layer2">
    <div id="page7">
+   <p id="teacher1">Teachers From Top 100 Colleges </p>
+   <p id="teacher2">They Are Great with Kids </p>
+   </div>
    </div>
    </div>
 
@@ -81,6 +101,7 @@ const LandingPage = ({ onSubmit }) => (
     </ul>
     </div>
     <div>
+    <form action="/buy" onSubmit={onSubmit}>
     <ul>
       <div className="priceButton">
        <li><button type="submit" id="priceButton1">Buy</button></li>
@@ -88,6 +109,7 @@ const LandingPage = ({ onSubmit }) => (
        <li><button type="submit" id="priceButton3">Buy</button></li>
       </div>
     </ul>
+    </form>
     </div>
     <div>
      <p id="priceline3">100% refund policy</p>

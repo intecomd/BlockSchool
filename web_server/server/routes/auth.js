@@ -4,6 +4,7 @@ const router = express.Router();
 const validator = require('validator');
 
 
+
 router.post('/signup', (req, res, next) => {
   const validationResult = validateSignupForm(req.body);
   if (!validationResult.success) {

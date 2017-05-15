@@ -5,6 +5,7 @@ import LoginPage from './Login/LoginPage';
 import SignUpPage from './SignUp/SignUpPage';
 import DashBoardPage from './DashBoard/DashBoardPage';
 import Payments from './Payments/Payments';
+import TakeMoney from './Payments/Checkout';
 import Auth from './Auth/Auth';
 
 
@@ -50,7 +51,11 @@ const routes = {
     },
     {
       path: '/buy',
-      component: Payments
+      component: TakeMoney
+    },
+    {
+      path: '/checkout',
+      component: TakeMoney
     }
   ]
 };
