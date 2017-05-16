@@ -12,7 +12,9 @@ class DashBoardPage extends React.Component {
     this.state = {
       errors: {},
       user: {
-        email: Auth.getEmail()
+        email: Auth.getEmail(),
+        firstName: Auth.getFirstName(),
+        userRole: Auth.getUserRole()
         // TODO: add personal info if needed for profile
       }
     };

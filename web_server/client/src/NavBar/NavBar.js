@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import Auth from '../Auth/Auth';
 import './NavBar.css';
-import logo from '../../public/BlockSchoolLogo.png';
+// import logo from '../../public/BlockSchoolLogo.png';
 
 const NavBar = ({ children }) => (
   <div className="background">

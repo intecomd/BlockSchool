@@ -2,11 +2,10 @@ import 'materialize-css/dist/css/materialize.min.css';
 import 'materialize-css/dist/js/materialize.min.js';
 
 import React from 'react';
-import logo from '../../public/BlockSchoolLogo.png';
+// import logo from '../../public/BlockSchoolLogo.png';
 import './App.css';
 
 import DashBoardPage from '../DashBoard/DashBoardPage';
-import Calendar from '../Components/Calendar/Calendar';
 
 class App extends React.Component{
   render() {

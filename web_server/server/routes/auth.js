@@ -2,7 +2,42 @@ const express = require('express');
 const passport = require('passport');
 const router = express.Router();
 const validator = require('validator');
-
+// const User = require('mongoose').model('User');
+//
+// var getUsers = function() {
+//   return new Promise((resolve, reject) => {
+//     User.find({}, function (err, users) {
+//       if (err) {
+//         reject(err);
+//       } else {
+//         resolve(users);
+//       }
+//     })
+//   });
+// }
+//
+// var getUserRole = function(email) {
+//   return new Promise((resolve, reject) => {
+//     User.findOne({email: email}, function (err, user) {
+//       if (err) {
+//         reject(err);
+//       } else {
+//         resolve(user);
+//       }
+//     })
+//   });
+// }
+//
+// router.get("/users", function (req, res) {
+//   problemService.getProblems()
+//     .then(users => res.json(users));
+// });
+//
+// router.get("/user", function (req, res) {
+//   var email = req.params.email;
+//   getUser(+email)
+//     .then(user => res.json(user));
+// });
 
 router.post('/signup', (req, res, next) => {
   const validationResult = validateSignupForm(req.body);
@@ -39,6 +74,15 @@ router.post('/signup', (req, res, next) => {
     return res.status(200).json({
       success: true,
       message: 'You have successfully signed up! Now you should be able to log in.'
+    });
+  })(req, res, next);
+});
+
+router.post('/update', (req, res, next) => {
+  return passport.authenticate('local-update', (err) => {
+    return res.status(200).json({
+      success: true,
+      message: 'You have successfully updated events.'
     });
   })(req, res, next);
 });

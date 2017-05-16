@@ -12,7 +12,7 @@ const DashBoard = ({
     <div id="nav-mobile" className="fixed collection">
       <a href="/"><img className='logo collection-item' src={logo} alt='logo' width="200px"/></a>
       <div className="align-center">
-        <br/><h5>&nbsp; &nbsp; Hello {user.email}</h5><br/>
+        <br/><h5>&nbsp; &nbsp; Hello {user.firstName}</h5><br/>
       </div>
       <Link to="/app" className="collection-item">Profile</Link>
       <Link to="/app/calendar" className="collection-item">Calendar</Link>

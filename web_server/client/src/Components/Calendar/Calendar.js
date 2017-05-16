@@ -13,21 +13,20 @@ import 'fullcalendar/dist/fullcalendar.js';
 import './Calendar.css';
 
 class CalendarPage extends React.Component {
-  addTeacher() {
-    var teacher = prompt("Teacher's Name");
-    this.setState({teachers: this.state.teachers.concat([teacher])});
-  }
-
   constructor(props, context) {
     super(props, context);
 
     // set the initial component state
     this.state = {
+      // admin: {
+      //   teachers: Auth.getTeachers()
+      // }
       teachers: [],
       errors: {},
       user: {
-        email: Auth.getEmail()
-        //events: Auth.getEvent()
+        email: Auth.getEmail(),
+        events: Auth.getEvents(),
+        userRole: Auth.getUserRole()
         // TODO: add personal info if needed for profile
       }
     };
@@ -35,22 +34,13 @@ class CalendarPage extends React.Component {
 
   componentDidMount(){
     const {calendar} = this.refs;
+    const email = this.state.user.email;
+    const events = this.state.user.events;
+    // this.processForm = this.processForm.bind(this);
+    //this.state = this.state.bind(this);
 
-    $('#external-events .fc-event').each(function() {
 
-      // store data so the calendar knows to render an event upon drop
-      $(this).data('event', {
-        title: $.trim($(this).text()), // use the element's text as the event title
-        stick: true // maintain when user navigates (see docs on the renderEvent method)
-      });
-
-      // make the event draggable using jQuery UI
-      $(this).draggable({
-        zIndex: 999,
-        revert: true,      // will cause the event to go back to its
-        revertDuration: 0  //  original position after the drag
-      });
-    });
+    this.makeTeacherDraggable();
 
     $('.remove-events').droppable({
         drop:function(event, ui) {
@@ -59,7 +49,7 @@ class CalendarPage extends React.Component {
     });
 
     $(calendar).fullCalendar({
-      events: [],
+      events: events,
 
       header: {
         left: 'prev,next today',
@@ -71,14 +61,13 @@ class CalendarPage extends React.Component {
       defaultTimedEventDuration: '01:00',
       minTime: "08:00:00",
       maxTime: "22:00:00",
-      
+
       theme: true,
       editable: true,
       selectable: true,
       selectHelper: true,
       droppable: true,
       allDaySlot: true,
-
 
       eventRender: function(event, element, view){
         element.click(function() {
@@ -88,13 +77,15 @@ class CalendarPage extends React.Component {
         });
       },
 
+      // eventAfterRender: function( event, element, view) {
+      //   console.log(event);
+      //   console.log(element);
+      //   console.log(view);
+      //   // this.setState()
+      //   // this.processForm();
+      // },
+
       select: function(start, end) {
-        // var duration = (end - start) /1000;
-        // if(duration == 1800) {
-        //   // set default duration to 1 hr.
-        // 	end = start.add(30, 'mins');
-        //   return calendar.fullCalendar('select', start, end);
-        // }
         var title = prompt("Teacher's Name");
         var eventData;
         if (title && title.trim()) {
@@ -102,23 +93,41 @@ class CalendarPage extends React.Component {
             title: title,
             start: start,
           };
-          // this.events.push(eventData);
           $('#calendar').fullCalendar('renderEvent', eventData);
+
+          fetch('http://localhost:3000/auth/update', {
+            method: 'POST',
+            cache: false,
+            headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              email: email,
+              events: eventData
+            })
+          }).then(response => {
+          });
         }
         $('#calendar').fullCalendar('unselect');
       },
 
       eventClick: function (calEvent, jsEvent, view) {
-        console.log(calEvent);
         $('#calendar').fullCalendar('removeEvents', calEvent._id);
       },
-      loading: function() {
-          //this.state.user.events
-      }
     });
   }
 
   componentDidUpdate() {
+    this.makeTeacherDraggable();
+  }
+
+  addTeacher() {
+    var teacher = prompt("Teacher's Name");
+    this.setState({teachers: this.state.teachers.concat([teacher])});
+  }
+
+  makeTeacherDraggable() {
     $('#external-events .fc-event').each(function() {
 
       // store data so the calendar knows to render an event upon drop
@@ -136,6 +145,41 @@ class CalendarPage extends React.Component {
     });
   }
 
+  processForm() {
+    const email = this.state.user.email;
+    const password = this.state.user.password;
+    const events = this.state.user.events;
+
+    // Post registeration data
+    fetch('http://localhost:3000/auth/update', {
+      method: 'POST',
+      cache: false,
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        email: this.state.user.email,
+        password: this.state.user.password,
+        events: this.state.user.events
+      })
+    }).then(response => {
+      if (response.status === 200) {
+        this.setState({
+          errors: {}
+        });
+      } else {
+        response.json().then(function(json) {
+          console.log(json);
+          const errors = json.errors ? json.errors : {};
+          errors.summary = json.message;
+          console.log(this.state.errors);
+          this.setState({errors});
+        }.bind(this));
+      }
+    });
+  }
+
   render() {
     return (
       <div>
@@ -144,17 +188,24 @@ class CalendarPage extends React.Component {
             <div id="calendar" ref="calendar"></div>
           </div>
           <div className="col s2">
-            <div id='external-events' onClick={() => this.addTeacher()}>
-        			<h4>Add New Teacher</h4>
-              <div>
-                {this.state.teachers.map(function(teacher){
-                  return <div className='fc-event'>{teacher}</div>
-                })}
-              </div>
-        		</div>
-            <div id='external-events' className="remove-events">
-              <h4>Remove Teacher</h4>
-            </div>
+            {Auth.isUserAdmin() ?
+              (<div>
+                <div id='external-events' onClick={() => this.addTeacher()}>
+            			<h4>Add New Teacher</h4>
+                  <div>
+                    {this.state.teachers.map(function(teacher){
+                      return <div className='fc-event'>{teacher}</div>
+                    })}
+                  </div>
+            		</div>
+                <div id='external-events' className="remove-events">
+                  <h4>Remove Teacher</h4>
+                </div>
+              </div>)
+              :
+              (<div></div>)
+            }
+
           </div>
         </div>
       </div>

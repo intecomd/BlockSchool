@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import Auth from '../Auth/Auth';
+// import Auth from '../Auth/Auth';
 import './LandingPage.css';
 
 const LandingPage = ({ children }) => (

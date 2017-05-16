@@ -7,6 +7,9 @@ const UserSchema = new mongoose.Schema({
     index: { unique: true }
   },
   password: String,
+  firstName: String,
+  userRole: String,
+  events: Array
 });
 
 

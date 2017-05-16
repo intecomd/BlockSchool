@@ -13,7 +13,8 @@ class SignUpPage extends React.Component {
       user: {
         email: '',
         password: '',
-        confirm_password: ''
+        confirm_password: '',
+        firstName: ''
       }
     };
 
@@ -28,10 +29,12 @@ class SignUpPage extends React.Component {
     const email = this.state.user.email;
     const password = this.state.user.password;
     const confirm_password = this.state.user.confirm_password;
+    const firstName = this.state.user.firstName;
 
     console.log('email:', email);
     console.log('password:', password);
     console.log('confirm_assword:', confirm_password);
+    console.log('firstName:', firstName);
 
     if (password !== confirm_password) {
       return;
@@ -47,7 +50,9 @@ class SignUpPage extends React.Component {
       },
       body: JSON.stringify({
         email: this.state.user.email,
-        password: this.state.user.password
+        password: this.state.user.password,
+        firstName: this.state.user.firstName,
+        userRole: 'client'
       })
     }).then(response => {
       if (response.status === 200) {
