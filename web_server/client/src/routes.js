@@ -6,6 +6,7 @@ import SignUpPage from './SignUp/SignUpPage';
 import DashBoardPage from './DashBoard/DashBoardPage';
 import Payments from './Payments/Payments';
 import TakeMoney from './Payments/Checkout';
+import ReferralPage from './Referral/ReferralPage';
 import Auth from './Auth/Auth';
 
 
@@ -56,6 +57,10 @@ const routes = {
     {
       path: '/checkout',
       component: TakeMoney
+    },
+    {
+      path: '/refer',
+      component: ReferralPage
     }
   ]
 };

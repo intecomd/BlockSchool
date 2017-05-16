@@ -30,7 +30,7 @@ const NavBar = ({ children }) => (
           <div className="container-fluid">
            <li><a href="/">Home</a></li>
            <li><a href="/signup">Free &nbsp;&nbsp;Trial</a></li>
-           <li><a>Refer</a></li>
+           <li><a href="/refer">Refer</a></li>
            <li><a href="/buy">Buy</a></li>
          </div>
         </ul>

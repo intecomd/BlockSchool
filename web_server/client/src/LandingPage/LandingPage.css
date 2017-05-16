@@ -1,9 +1,24 @@
+#background1 {
+  background: url(../../public/cover.png);
+  background-size: cover;
+  background-repeat:   no-repeat;
+  width: auto;
+  height: 640px;
+  margin-top: -21px;
+  margin-left: -215px;
+  margin-right: -215px;
+}
+
 .box {
+  position: relative;
     width: 900px;
     height: 200px;
     border: 1px solid red;
     padding: 25px;
-    margin: 200px 60px;
+    margin-top: -500px;
+    margin-left: 50px;
+    margin-bottom: 220px;
+
     text-align: center;
 }
 
@@ -232,6 +247,214 @@ margin-left: -215px;
   margin-left: 400px;
   margin-top: -70px;
   font-size: 55px;
+}
+
+.teacherRow1 li {
+    margin-left: 48px;
+    display:inline;
+}
+
+.teacherRow1 li #teacher1 {
+    display: inline-block;
+    padding:10px;
+    float:left;
+    margin-left: 90px;
+    margin-top: 15px;
+    width: 220px;
+    height: 80px;
+}
+
+.teacherRow1 li #teacher2 {
+  display: inline-block;
+  padding:10px;
+  margin-left: 0px;
+  margin-top: 15px;
+  width: 220px;
+  height: 80px;
+}
+
+.teacherRow2 li {
+    margin-left: 48px;
+    display:inline;
+}
+
+.teacherRow2 li #teacher3 {
+    display: inline-block;
+    padding:10px;
+    float:left;
+    margin-left: 100px;
+    margin-top: 15px;
+    width: 200px;
+    height: 70px;
+    background-color: white;
+}
+
+.teacherRow2 li #teacher4 {
+  display: inline-block;
+  padding:10px;
+  margin-left: 20px;
+  margin-top: 15px;
+  width: 200px;
+  height: 70px;
+  background-color: white;
+}
+
+.teacherRow3 li {
+    margin-left: 48px;
+    display:inline;
+}
+
+.teacherRow3 li #teacher5 {
+    display: inline-block;
+    padding:10px;
+    float:left;
+    margin-left: 90px;
+    margin-top: 15px;
+    width: 220px;
+    height: 80px;
+}
+
+.teacherRow3 li #teacher6 {
+  display: inline-block;
+  padding:10px;
+  margin-left: 10px;
+  margin-top: 15px;
+  width: 200px;
+  height: 70px;
+  background-color: white;
+}
+
+.teacherRow4 li {
+    margin-left: 48px;
+    display:inline;
+}
+
+.teacherRow4 li #teacher7 {
+    display: inline-block;
+    padding:10px;
+    float:left;
+    margin-left: 90px;
+    margin-top: 15px;
+    width: 220px;
+    height: 80px;
+}
+
+.teacherRow4 li #teacher8 {
+  display: inline-block;
+  padding:10px;
+  margin-left: 0px;
+  margin-top: 15px;
+  width: 220px;
+  height: 80px;
+}
+
+.teacherRow5 li {
+    margin-left: 48px;
+    display:inline;
+}
+
+.teacherRow5 li #teacher9 {
+    display: inline-block;
+    padding:10px;
+    float:left;
+    margin-left: 90px;
+    margin-top: 15px;
+    width: 220px;
+    height: 80px;
+}
+
+.teacherRow5 li #teacher10 {
+  display: inline-block;
+  padding:10px;
+  margin-left: 10px;
+  margin-top: 22px;
+  width: 200px;
+  height: 65px;
+  background-color: white;
+}
+
+#des1 {
+  color: white;
+  margin-left: 700px;
+  margin-top: -550px;
+  font-size: 35px;
+}
+
+#des2 {
+  color: white;
+  margin-left: 700px;
+  margin-top: -40px;
+  font-size: 35px;
+}
+
+#des3 {
+  color: white;
+  margin-left: 700px;
+  margin-top: -40px;
+  font-size: 35px;
+}
+
+#des4 {
+  color: white;
+  margin-left: 700px;
+  margin-top: -40px;
+  font-size: 35px;
+}
+
+#des5 {
+  color: white;
+  margin-left: 700px;
+  margin-top: -40px;
+  font-size: 35px;
+}
+
+#des6 {
+  color: white;
+  margin-left: 700px;
+  margin-top: -20px;
+  font-size: 35px;
+}
+
+#des7 {
+  color: white;
+  margin-left: 700px;
+  margin-top: -40px;
+  font-size: 35px;
+}
+
+#des8 {
+  color: white;
+  margin-left: 700px;
+  margin-top: -40px;
+  font-size: 35px;
+}
+
+#des9 {
+  color: white;
+  margin-left: 700px;
+  margin-top: -40px;
+  font-size: 35px;
+}
+
+#des10 {
+  color: white;
+  margin-left: 700px;
+  margin-top: -40px;
+  font-size: 35px;
+}
+
+#des11 {
+  color: white;
+  margin-left: 700px;
+  margin-top: -40px;
+  font-size: 35px;
+}
+
+#des12 {
+  color: white;
+  margin-left: 700px;
+  margin-top: -40px;
+  font-size: 35px;
 }
 
 .aboutProject {

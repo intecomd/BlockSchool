@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 import Auth from '../Auth/Auth';
 import './LandingPage.css';
+import logo from '../../public/BlockSchoolLogo.png';
 import bg2 from "../../public/bg2.png";
 import aboutYou from "../../public/aboutyou.png";
 import aboutBlock from "../../public/aboutblock.png";
@@ -10,16 +11,30 @@ import aboutPrice from "../../public/aboutprice.png";
 import price1 from "../../public/price1.png";
 import price2 from "../../public/price2.png";
 import price3 from "../../public/price3.png";
+import school1 from "../../public/school1.png";
+import school2 from "../../public/school2.png";
+import school3 from "../../public/school3.png";
+import school4 from "../../public/school4.png";
+import school5 from "../../public/school5.png";
+import school6 from "../../public/school6.png";
+import school7 from "../../public/school7.png";
+import school8 from "../../public/school8.png";
+import school9 from "../../public/school9.png";
+import school10 from "../../public/school10.png";
 
 
 
 const LandingPage = ({ onSubmit }) => (
 
 <div>
+  <div id="background1">
+  </div>
+
   <div className="box">
    <h3 className="line1">PRIVATE. <span className="color1">CR</span><span className="color2">EA</span><span className="color3">TI</span><span className="color4">VE</span> CODING</h3>
    <h3 className="line2">LIVING TUTORING FOR KIDS AGE 4-14</h3>
   </div>
+
   <div id="page1">
   <form action="/signup" onSubmit={onSubmit}>
     <button type="submit" className="btn btn-primary" id="button">Free Trial</button>
@@ -69,6 +84,67 @@ const LandingPage = ({ onSubmit }) => (
    <div id="page7">
    <p id="teacher1">Teachers From Top 100 Colleges </p>
    <p id="teacher2">They Are Great with Kids </p>
+
+   <div>
+   <ul>
+     <div className="teacherRow1">
+      <li><img id="teacher1" src={school1} /></li>
+      <li><img id="teacher2" src={school2} /></li>
+      </div>
+   </ul>
+   </div>
+
+   <div>
+   <ul>
+     <div className="teacherRow2">
+      <li><img id="teacher3" src={school3} /></li>
+      <li><img id="teacher4" src={school4} /></li>
+     </div>
+   </ul>
+   </div>
+
+   <div>
+   <ul>
+     <div className="teacherRow3">
+      <li><img id="teacher5" src={school5} /></li>
+      <li><img id="teacher6" src={school6} /></li>
+     </div>
+   </ul>
+   </div>
+
+   <div>
+   <ul>
+     <div className="teacherRow4">
+      <li><img id="teacher7" src={school7} /></li>
+      <li><img id="teacher8" src={school8} /></li>
+     </div>
+   </ul>
+   </div>
+
+   <div>
+   <ul>
+     <div className="teacherRow5">
+      <li><img id="teacher9" src={school9} /></li>
+      <li><img id="teacher10" src={school10} /></li>
+     </div>
+   </ul>
+   </div>
+
+   <div>
+   <p id="des1">BlockSchool only hires teachers from </p>
+   <p id="des2">top 100 US colleges. Every teacher </p>
+   <p  id="des3">must pass a technical interview, </p>
+   <p  id="des4">have some teaching experience, and  </p>
+   <p  id="des5">complete a background check. </p>
+   <p id="des6">Teachers prepare each class by </p>
+   <p id="des7">having recently complete the same </p>
+   <p  id="des8">project your child is working on. </p>
+   <p  id="des9">During each class, teachers are</p>
+   <p  id="des10">tracking student progress across </p>
+   <p  id="des11">many dimensions so parents are </p>
+   <p  id="des12">always in the loop. </p>
+   </div>
+
    </div>
    </div>
    </div>

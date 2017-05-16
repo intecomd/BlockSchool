@@ -19,6 +19,10 @@ const LoginForm = ({
   errors,
   user,
 }) => (
+  <div>
+  <div id="background1">
+  </div>
+  <div className="login">
   <div className="container">
     <div className="card-panel login-panel">
       <form className="col s12" action="/" onSubmit={onSubmit}>
@@ -62,6 +66,9 @@ const LoginForm = ({
       </form>
     </div>
   </div>
+  </div>
+  </div>
+
 );
 
 LoginForm.propTypes = {
