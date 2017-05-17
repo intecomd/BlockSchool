@@ -25,6 +25,7 @@ class CalendarPage extends React.Component {
       errors: {},
       user: {
         email: Auth.getEmail(),
+        password: Auth.getPassword(),
         events: Auth.getEvents(),
         userRole: Auth.getUserRole()
         // TODO: add personal info if needed for profile
@@ -35,6 +36,7 @@ class CalendarPage extends React.Component {
   componentDidMount(){
     const {calendar} = this.refs;
     const email = this.state.user.email;
+    const password = this.state.user.password;
     const events = this.state.user.events;
     // this.processForm = this.processForm.bind(this);
     //this.state = this.state.bind(this);
@@ -95,6 +97,9 @@ class CalendarPage extends React.Component {
           };
           $('#calendar').fullCalendar('renderEvent', eventData);
 
+          console.log(email);
+          console.log(password);
+
           fetch('http://localhost:3000/auth/update', {
             method: 'POST',
             cache: false,
@@ -104,10 +109,14 @@ class CalendarPage extends React.Component {
             },
             body: JSON.stringify({
               email: email,
+              password: password,
               events: eventData
             })
           }).then(response => {
           });
+
+          console.log('end fetch at calendar');
+
         }
         $('#calendar').fullCalendar('unselect');
       },

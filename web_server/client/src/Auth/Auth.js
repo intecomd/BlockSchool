@@ -4,6 +4,7 @@ class Auth {
    *
    * @param {string} token
    * @param {string} email
+   * @param {string} password
    * @param {string} userRole
    * @param {string} firstName
    * @param {array} events
@@ -12,6 +13,7 @@ class Auth {
     console.log(json);
     localStorage.setItem('token', token);
     localStorage.setItem('email', json.user.email);
+    localStorage.setItem('password', json.user.password);
     localStorage.setItem('userRole', json.user.userRole);
     localStorage.setItem('events', JSON.stringify(json.user.events));
     localStorage.setItem('firstName', json.user.firstName);
@@ -42,6 +44,7 @@ class Auth {
   static deauthenticateUser() {
     localStorage.removeItem('token');
     localStorage.removeItem('email');
+    localStorage.removeItem('password');
     localStorage.removeItem('userRole');
     localStorage.removeItem('events');
     localStorage.removeItem('firstName');
@@ -64,6 +67,15 @@ class Auth {
    static getEmail() {
      return localStorage.getItem('email');
    }
+
+   /**
+    * Get password.
+    *
+    * @returns {string}
+    */
+    static getPassword() {
+      return localStorage.getItem('password');
+    }
 
    /**
     * Get userRole.

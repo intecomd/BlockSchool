@@ -9,19 +9,16 @@ module.exports = new PassportLocalStrategy({
   session: false,
   passReqToCallback: true
 }, (req, email, password, done) => {
+  console.log("in update passport");
   const userData = {
     email: email.trim(),
-    password: password.trim(),
     events: req.body.events
   };
+  console.log(userData);
 
   User.update({email: userData.email}, { $push : {
           events: userData.events
-      }}, {upsert: true}, function ( err ) {
-        if(err){
-                console.log(err);
-        }else{
-                console.log("Successfully added");
-        }
-  });
+      }},
+      done
+  );
 });
