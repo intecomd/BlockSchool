@@ -11,6 +11,7 @@ class SignUpPage extends React.Component {
     this.state = {
       errors: {},
       user: {
+        
         email: '',
         password: '',
         confirm_password: ''

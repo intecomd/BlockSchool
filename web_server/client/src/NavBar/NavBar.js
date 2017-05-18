@@ -31,7 +31,7 @@ const NavBar = ({ children }) => (
            <li><a href="/">Home</a></li>
            <li><a href="/signup">Free &nbsp;&nbsp;Trial</a></li>
            <li><a href="/refer">Refer</a></li>
-           <li><a href="/buy">Buy</a></li>
+           <li><a href="/price">Buy</a></li>
          </div>
         </ul>
       </div>

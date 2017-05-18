@@ -43,7 +43,7 @@ const LoginForm = ({
         </div>
         {errors.password && <div className="row"><p className="error-message">{errors.password}</p></div>}
         <div className="row right-align">
-          <input type="submit" className="waves-effect waves-light btn cyan lighten-3" value='Log in'/>
+          <input type="submit" className="waves-effect waves-light btn rgb(0,194,177)" value='Log in'/>
         </div>
 
         <div className="row center-align">

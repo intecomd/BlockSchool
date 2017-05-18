@@ -10,15 +10,14 @@ const Payments = ({ onSubmit }) => (
 
   <div className="box1">
    <h3 className="l1">Shopping Cart</h3>
-   <h3 className="l2"><span id="pn">Package Name</span><span id="qut">Quantity</span><span id="pri">Price</span></h3>
-   <h3 className="l2"><span id="pn">30 Classes Package</span><span id="qut">1</span><span id="pri">960</span></h3>
-   <hr id="hrcolor" color="#00C2B1" />
+   <h3 className="l2"><span id="pn">30 Classes Package</span><span id="pri">960</span></h3>
+   <hr id="hr" color="#00C2B1" />
    <h3 className="l2"><span id="total">Total</span><span id="totalpri">960</span></h3>
    <form >
      Promotion: <input type="text" name="fname" placeholder="Promotion code" />
    </form>
 
-   <form action="/charge" method="post" >
+   <form action="localhost:3000/charge" method="post" >
      <script
      src="https://checkout.stripe.com/checkout.js"
      className="stripe-button"

@@ -7,7 +7,7 @@
 }
 
 #position {
-  margin-left: 450px;
+  margin-left: 400px;
   margin-top: 80px;
   font-size: 40px;
 }
@@ -31,20 +31,26 @@
 }
 
 .box1 {
-    width: 800px;
+    width: 550px;
     height: 380px;
     border: 2px solid rgb(0,194,177);
     padding: 25px;
-    margin: 40px 300px;
+    margin: 40px 450px;
     text-align: center;
 }
 
 .l1 {
   font-size: 20px;
+  margin-top: 0px;
 }
 
 .l2 {
   font-size: 20px;
+  margin: 40px;
+}
+
+#hr {
+  margin-top: -20px;
 }
 
 #pn {
@@ -64,5 +70,5 @@
 }
 
 #totalpri {
-  margin-left: 500px;
+  margin-left: 280px;
 }

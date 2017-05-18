@@ -1,0 +1,14 @@
+babel-compiler@6.9.1
+babel-runtime@0.1.11
+caching-compiler@1.1.7
+ecmascript@0.5.8
+ecmascript-runtime@0.3.14
+fourseven:scss@3.10.0
+jquery@1.11.9
+materialize:materialize@0.98.1
+meteor@1.2.17
+modules@0.7.6
+modules-runtime@0.7.6
+promise@0.8.7
+random@1.0.10
+underscore@1.0.9

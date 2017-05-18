@@ -15,7 +15,7 @@
     height: 200px;
     border: 1px solid red;
     padding: 25px;
-    margin-top: -500px;
+    margin-top: -450px;
     margin-left: 50px;
     margin-bottom: 220px;
 
@@ -46,7 +46,7 @@
   color: red;
 }
 
-#button {
+#button1 {
    background: #1898c8;
    height:60px;
    width:300px;
@@ -470,14 +470,156 @@ margin-left: -215px;
   background-image:  url(../../public/bg5.png);
   background-size: cover;
   background-repeat:   no-repeat;
-  -webkit-filter: blur(5px);
-   filter: blur(5px);
    width: auto;
-   height: 750px;
+   height: 1000px;
    margin-top: -70px;
    margin-left: -215px;
    margin-right: -215px;
 }
+
+.layer3 {
+    background-color: rgba(129, 129, 142, 0.80);
+    position: absolute;
+    margin-top: 0px;
+    top: 70;
+    left: 0;
+    width: 100%;
+    height: 1000px;
+}
+
+
+#projectline1 {
+  color: white;
+  text-align: center;
+  font-size: 55px;
+}
+
+#projectline2 {
+  color: white;
+  margin-top: -55px;
+  text-align: center;
+  font-size: 45px;
+}
+
+#projectline3 {
+  color: white;
+  margin-top: -50px;
+  text-align: center;
+  font-size: 45px;
+}
+
+#projectline4 {
+  color: white;
+  margin-top: -50px;
+  text-align: center;
+  font-size: 45px;
+}
+
+#projectline5 {
+  color: white;
+  margin-top: -50px;
+  text-align: center;
+  font-size: 45px;
+}
+
+#projectline6 {
+  color: white;
+  margin-top: -50px;
+  text-align: center;
+  font-size: 45px;
+}
+
+#project1 {
+    background: rgb(236,238,237);
+    display: inline-block;
+    padding:10px;
+    float:left;
+    margin-left: 1px;
+    margin-top: 15px;
+    width: 355px;
+    height: 356px;
+}
+
+#project2 {
+    background-color: rgb(236,238,237);
+    display: inline-block;
+    padding:10px;
+    float:left;
+    margin-left: 1px;
+    margin-top: 15px;
+    width: 355px;
+    height: 356px;
+}
+
+#project3 {
+    background-color: rgb(236,238,237);
+    display: inline-block;
+    padding:10px;
+    float:left;
+    margin-left: 1px;
+    margin-top: 15px;
+    width: 355px;
+    height: 356px;
+}
+
+#project4 {
+    background-color: rgb(164,214,235);
+    display: inline-block;
+    padding:10px;
+    margin-left: 1px;
+    margin-top: 15px;
+    width: 355px;
+    height: 356px;
+}
+
+
+
+.projectdes {
+  display:inline;
+}
+
+ .projectdes #projectdes1 {
+  display: inline-block;
+  float:left;
+  padding:10px;
+  margin-left: 50px;
+  margin-top: -10px;
+  width: 350px;
+  color: white;
+  font-size: 30px;
+
+}
+
+.projectdes #projectdes2 {
+  display: inline-block;
+  float: left;
+  margin-left: 10px;
+  margin-top: 0px;
+  width: 350px;
+  color: white;
+  font-size: 30px;
+}
+
+.projectdes #projectdes3 {
+  display: inline-block;
+  margin-left: 30px;
+  margin-top: 0px;
+  float: left;
+  width: 350px;
+  color: white;
+  font-size: 30px;
+}
+
+.projectdes #projectdes4 {
+  display: inline-block;
+  margin-left: 1200px;
+  margin-top: -110px;
+  float: left;
+  width: 350px;
+  color: white;
+  font-size: 30px;
+}
+
 
 .aboutPrice {
 
@@ -493,7 +635,7 @@ margin-left: -215px;
   background-size: cover;
   background-repeat:   no-repeat;
    width: auto;
-   height:1130px;
+   height:1000px;
    margin-top: -100px;
    margin-left: -215px;
    margin-right: -215px;
@@ -522,6 +664,7 @@ margin-left: -215px;
 
 .price li {
     margin-left: 148px;
+    margin-bottom: 30px;
     display:inline;
 }
 
@@ -555,68 +698,34 @@ margin-left: -215px;
   height: 500px;
 }
 
-.priceButton li {
-    display:inline;
-}
-
-.priceButton li #priceButton1 {
-    display: inline-block;
-    padding:10px;
-    float:left;
-    margin-left: 220px;
-    margin-top: 50px;
-    width: 120px;
-    height: 40px;
-    background-color: rgb(218,177,26);
-}
-
-.priceButton li #priceButton2 {
-    display: inline-block;
-    padding:10px;
-    float:left;
-    margin-left: 320px;
-    margin-top: 50px;
-    width: 120px;
-    height: 40px;
-    background-color: rgb(218,177,26);
-}
-
-.priceButton li #priceButton3 {
-    display: inline-block;
-    padding:10px;
-    margin-left: 320px;
-    margin-top: 50px;
-    width: 120px;
-    height: 40px;
-    background-color: rgb(218,177,26);
-}
 
 #priceline3 {
-  font-size: 52px;
+  font-size: 45px;
   color: white;
   text-align: center;
-  margin-top: 0px;
+  margin-top: 100px;
+  padding-top: 80px;
 }
 
 #priceline4 {
-  font-size: 52px;
+  font-size: 45px;
   color: white;
   text-align: center;
-  margin-top: -75px;
+  margin-top: -65px;
 }
 
 #priceline5 {
-  font-size: 52px;
+  font-size: 45px;
   color: white;
   text-align: center;
-  margin-top: -75px;
+  margin-top: -65px;
 }
 
 #priceline6 {
-  font-size: 52px;
+  font-size: 45px;
   color: white;
   text-align: center;
-  margin-top: -75px;
+  margin-top: -65px;
 }
 
 #colorstrip1{
@@ -650,9 +759,4 @@ margin-left: -215px;
   margin-top: -100px;
   margin-left: 285px;
   color: white;
-}
-
-.bg2 {
-  width: 100%;
-  margin-left: -200px;
 }

@@ -5,7 +5,7 @@ var router = express.Router();
 var stripe = require("stripe")("sk_test_xOAbR4gWgrFR4NqlJ79vMW9u");
 
 
-router.post('/charge', function(req, res, next) {
+router.post('/', function(req, res) {
   // Token is created using Stripe.js or Checkout!
 // Get the payment token submitted by the form:
   var token = request.body.stripeToken;

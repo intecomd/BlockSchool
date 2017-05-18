@@ -21,6 +21,10 @@ import school7 from "../../public/school7.png";
 import school8 from "../../public/school8.png";
 import school9 from "../../public/school9.png";
 import school10 from "../../public/school10.png";
+import project1 from "../../public/project1.png";
+import project2 from "../../public/project2.png";
+import project3 from "../../public/project3.png";
+import project4 from "../../public/project4.png";
 
 
 
@@ -35,9 +39,9 @@ const LandingPage = ({ onSubmit }) => (
    <h3 className="line2">LIVING TUTORING FOR KIDS AGE 4-14</h3>
   </div>
 
-  <div id="page1">
+  <div >
   <form action="/signup" onSubmit={onSubmit}>
-    <button type="submit" className="btn btn-primary" id="button">Free Trial</button>
+    <button id="button1" type="submit" className="btn btn-primary" >Free Trial</button>
   </form>
   </div>
 
@@ -67,7 +71,7 @@ const LandingPage = ({ onSubmit }) => (
    <div className="layer1">
    <div id="page5">
    <p id="block1">Children love blocks. Blocks help children imagine and create. </p>
-   <p id="block2">This is why BlockSchool''s central concept is block. </p>
+   <p id="block2">This is why BlockSchool&#39;s central concept is block. </p>
    <p  id="block3">To build with blocks, kids write code in a Scratch-like visual </p>
    <p  id="block4">programming language call Puzzle. This empowered them to </p>
    <p  id="block5">build whatever they want (and a lot faster than LEGOs). </p>
@@ -154,7 +158,38 @@ const LandingPage = ({ onSubmit }) => (
    </div>
 
    <div id="background5">
+   <div className="layer3">
    <div id="page7">
+   <p id="projectline1"> Fun Projects </p>
+   <p id="projectline2">BlockSchool has a wide variety of projects to flex student </p>
+   <p id="projectline3"> brains every which way. </p>
+   <p id="projectline4"> Each Project is carefully crafted to ensure students learn </p>
+   <p id="projectline5"> key computer science concept like loops, lists, functions, </p>
+   <p id="projectline6"> and a lot more. </p>
+
+   <div>
+   <ul>
+     <div className="project">
+      <li><img id="project1" src={project1} /></li>
+      <li><img id="project2" src={project2} /></li>
+      <li><img id="project3" src={project3} /></li>
+      <li><img id="project4" src={project4} /></li>
+     </div>
+   </ul>
+   </div>
+
+   <div>
+   <ul className="projectdes">
+     <div>
+      <li id="projectdes1">It's raining!&nbsp;Fix the princess's roof</li>
+      <li id="projectdes2">Find food for Elle the elephant</li>
+      <li id="projectdes3">Build your home</li>
+      <li id="projectdes4">Allens</li>
+    </div>
+   </ul>
+   </div>
+
+   </div>
    </div>
    </div>
 
@@ -176,17 +211,7 @@ const LandingPage = ({ onSubmit }) => (
       </div>
     </ul>
     </div>
-    <div>
-    <form action="/buy" onSubmit={onSubmit}>
-    <ul>
-      <div className="priceButton">
-       <li><button type="submit" id="priceButton1">Buy</button></li>
-       <li><button type="submit" id="priceButton2">Buy</button></li>
-       <li><button type="submit" id="priceButton3">Buy</button></li>
-      </div>
-    </ul>
-    </form>
-    </div>
+
     <div>
      <p id="priceline3">100% refund policy</p>
      <p id="priceline4">Bring the second student to split tuition fee</p>

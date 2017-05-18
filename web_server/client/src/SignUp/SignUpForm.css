@@ -1,13 +1,21 @@
 .signup {
-  margin-top: -580px;
+  margin-top: 80px;
 }
 
 .signup-panel {
   margin: auto;
-  width: 40%;
+  width: 60%;
 }
 
 .error-message {
   padding-left: 20px;
   color: red;
+}
+
+.freeTrialBG {
+  background-image: url(../../public/freetrial.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: -22px;
+  width: 100%; height: 300px;
 }

@@ -4,7 +4,7 @@ var express = require('express');
 var mongoose = require('mongoose');
 var passport = require('passport');
 var path = require('path');
-var hbs = require('hbs');
+
 
 var index = require('./routes/index');
 var auth = require('./routes/auth');

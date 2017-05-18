@@ -4,7 +4,6 @@
     background-repeat: no-repeat;
     margin-top: -22px;
     width: 100%; height: 300px;
-
 }
 
 #gift {
@@ -16,22 +15,57 @@
 
 #giftLine1 {
   margin-top: -20px;
-  margin-left: 300px;
+  margin-left: 250px;
+  color: rgb(64,78,96);
+  font-size: 20px;
 }
 
 #giftLine2 {
-  margin-left: 300px;
+  margin-left: 250px;
+  margin-top: -15px;
+  color: rgb(64,78,96);
+  font-size: 20px;
 }
 
 #giftLine3 {
-  margin-left: 300px;
+  margin-left: 250px;
+  margin-top: -15px;
+  color: rgb(64,78,96);
+  font-size: 20px;
 }
 
 .referralBox {
   border: 2px solid rgb(0,194,177);
   padding: 25px;
-  margin-left: 700px;
-  margin-top: -270px;
+  margin-left: 690px;
+  margin-top: -275px;
   width: 450px;
   height: 250px;
+}
+
+#button2 {
+   background: rgb(0,194,177);
+   height:35px;
+   width:190px;
+   margin-top: 20px;
+   margin-left: 590px;
+   position:relative;
+   border-radius: 10px;
+   font-size: 21px;
+}
+
+.codeBox {
+    position: relative;
+    width: 900px;
+    height: 200px;
+    border: 2px solid rgb(0,194,177);
+    padding: 25px;
+    margin-left: 250px;
+    margin-top: 30px;
+    margin-bottom: 220px;
+    text-align: center;
+}
+
+.codeBox #codeStyle {
+  font-size: 25px;
 }
