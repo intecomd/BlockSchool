@@ -1,5 +1,7 @@
+const jwt = require('jsonwebtoken');
 const User = require('mongoose').model('User');
 const PassportLocalStrategy = require('passport-local').Strategy;
+const config = require('../config/config.json');
 
 module.exports = new PassportLocalStrategy({
   usernameField: 'email',
@@ -7,20 +9,16 @@ module.exports = new PassportLocalStrategy({
   session: false,
   passReqToCallback: true
 }, (req, email, password, done) => {
+  console.log("in update passport");
   const userData = {
     email: email.trim(),
-    password: password.trim(),
-    firstName: req.body.firstName,
-    userRole: req.body.userRole
+    events: req.body.events
   };
+  console.log(userData);
 
-  const newUser = new User(userData);
-  newUser.save((err) => {
-    console.log('Save new user!');
-    if (err) {
-      return done(err);
-    }
-
-    return done(null);
-  });
+  User.update({email: userData.email}, { $push : {
+          events: userData.events
+      }},
+      done
+  );
 });

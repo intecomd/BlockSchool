@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import Auth from '../Auth/Auth';
+// import Auth from '../Auth/Auth';
 import './LandingPage.css';
 import logo from '../../public/BlockSchoolLogo.png';
 import bg2 from "../../public/bg2.png";

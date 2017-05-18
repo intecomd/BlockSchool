@@ -3,8 +3,11 @@ const passport = require('passport');
 const router = express.Router();
 const validator = require('validator');
 
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> fbb491a6c325e842ccd12cd97ec0cd31fcdfa77a
 router.post('/signup', (req, res, next) => {
   const validationResult = validateSignupForm(req.body);
   if (!validationResult.success) {
@@ -40,6 +43,18 @@ router.post('/signup', (req, res, next) => {
     return res.status(200).json({
       success: true,
       message: 'You have successfully signed up! Now you should be able to log in.'
+    });
+  })(req, res, next);
+});
+
+router.post('/update', (req, res, next) => {
+  console.log("in auth/update");
+  return passport.authenticate('local-update', (err, token, userData) => {
+    console.log("in auth/update2");
+
+    return res.status(200).json({
+      success: true,
+      message: 'You have successfully updated events.'
     });
   })(req, res, next);
 });
