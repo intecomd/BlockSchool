@@ -2,9 +2,14 @@
 
 Runtime type checking for React props and similar objects.
 
+You can use prop-types to document the intended types of properties passed to
+components. React (and potentially other libraries—see the checkPropTypes()
+reference below) will check props passed to your components against those
+definitions, and warn in development if they don’t match.
+
 ## Installation
 
-```
+```shell
 npm install --save prop-types
 ```
 
@@ -20,10 +25,115 @@ If you prefer a `<script>` tag, you can get it from `window.PropTypes` global:
 ```html
 <!-- development version -->
 <script src="https://unpkg.com/prop-types/prop-types.js"></script>
- 
+
 <!-- production version -->
 <script src="https://unpkg.com/prop-types/prop-types.min.js"></script>
 ```
+
+## Usage
+
+PropTypes was originally exposed as part of the React core module, and is
+commonly used with React components.
+Here is an example of using PropTypes with a React component, which also
+documents the different validators provided:
+
+```jsx
+import React from 'react';
+import PropTypes from 'prop-types';
+
+class MyComponent extends React.Component {
+  render() {
+    // ... do things with the props
+  }
+}
+
+MyComponent.propTypes = {
+  // You can declare that a prop is a specific JS primitive. By default, these
+  // are all optional.
+  optionalArray: PropTypes.array,
+  optionalBool: PropTypes.bool,
+  optionalFunc: PropTypes.func,
+  optionalNumber: PropTypes.number,
+  optionalObject: PropTypes.object,
+  optionalString: PropTypes.string,
+  optionalSymbol: PropTypes.symbol,
+
+  // Anything that can be rendered: numbers, strings, elements or an array
+  // (or fragment) containing these types.
+  optionalNode: PropTypes.node,
+
+  // A React element.
+  optionalElement: PropTypes.element,
+
+  // You can also declare that a prop is an instance of a class. This uses
+  // JS's instanceof operator.
+  optionalMessage: PropTypes.instanceOf(Message),
+
+  // You can ensure that your prop is limited to specific values by treating
+  // it as an enum.
+  optionalEnum: PropTypes.oneOf(['News', 'Photos']),
+
+  // An object that could be one of many types
+  optionalUnion: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+    PropTypes.instanceOf(Message)
+  ]),
+
+  // An array of a certain type
+  optionalArrayOf: PropTypes.arrayOf(PropTypes.number),
+
+  // An object with property values of a certain type
+  optionalObjectOf: PropTypes.objectOf(PropTypes.number),
+
+  // An object taking on a particular shape
+  optionalObjectWithShape: PropTypes.shape({
+    color: PropTypes.string,
+    fontSize: PropTypes.number
+  }),
+
+  // You can chain any of the above with `isRequired` to make sure a warning
+  // is shown if the prop isn't provided.
+  requiredFunc: PropTypes.func.isRequired,
+
+  // A value of any data type
+  requiredAny: PropTypes.any.isRequired,
+
+  // You can also specify a custom validator. It should return an Error
+  // object if the validation fails. Don't `console.warn` or throw, as this
+  // won't work inside `oneOfType`.
+  customProp: function(props, propName, componentName) {
+    if (!/matchme/.test(props[propName])) {
+      return new Error(
+        'Invalid prop `' + propName + '` supplied to' +
+        ' `' + componentName + '`. Validation failed.'
+      );
+    }
+  },
+
+  // You can also supply a custom validator to `arrayOf` and `objectOf`.
+  // It should return an Error object if the validation fails. The validator
+  // will be called for each key in the array or object. The first two
+  // arguments of the validator are the array or object itself, and the
+  // current item's key.
+  customArrayProp: PropTypes.arrayOf(function(propValue, key, componentName, location, propFullName) {
+    if (!/matchme/.test(propValue[key])) {
+      return new Error(
+        'Invalid prop `' + propFullName + '` supplied to' +
+        ' `' + componentName + '`. Validation failed.'
+      );
+    }
+  })
+};
+```
+
+Refer to the [React documentation](https://facebook.github.io/react/docs/typechecking-with-proptypes.html) for more information.
+
+## Migrating from React.PropTypes
+
+Check out [Migrating from React.PropTypes](https://facebook.github.io/react/blog/2017/04/07/react-v15.5.0.html#migrating-from-react.proptypes) for details on how to migrate to `prop-types` from `React.PropTypes`.
+
+There are also important notes below.
 
 ## How to Depend on This Package?
 
@@ -32,7 +142,7 @@ For example:
 
 ```js
   "dependencies": {
-    "prop-types": "^15.5.0" 
+    "prop-types": "^15.5.7" 
   }
 ```
 
@@ -40,22 +150,26 @@ For libraries, we *also* recommend leaving it in `dependencies`:
 
 ```js
   "dependencies": {
-    "prop-types": "^15.5.0" 
+    "prop-types": "^15.5.7" 
   },
   "peerDependencies": {
     "react": "^15.5.0" 
   }
 ```
 
-Just make sure that the version range uses a caret (`^`) and thus is broad enough for npm to efficiently deduplicate packages.
+**Note:** there are known issues in versions before 15.5.7 so we recommend using it as the minimal version.
+
+Make sure that the version range uses a caret (`^`) and thus is broad enough for npm to efficiently deduplicate packages.
+
+For UMD bundles of your comoponents, make sure you **don’t** include `PropTypes` in the build. Usually this is done by marking it as an external (the specifics depend on your bundler), just like you do with React.
 
 ## Compatibility
 
-### React 14
+### React 0.14
 
 This package is compatible with **React 0.14.9**. Compared to 0.14.8 (which was released a year ago), there are no other changes in 0.14.9, so it should be a painless upgrade.
 
-```
+```shell
 # ATTENTION: Only run this if you still use React 0.14!
 npm install --save react@^0.14.9 react-dom@^0.14.9
 ```
@@ -112,15 +226,35 @@ This is new behavior, and you will only encounter it when you migrate from `Reac
 // Works with standalone PropTypes
 PropTypes.checkPropTypes(MyComponent.propTypes, props, 'prop', 'MyComponent');
 ```
+See below for more info.
 
 **You might also see this error** if you’re calling a `PropTypes` validator from your own custom `PropTypes` validator. In this case, the fix is to make sure that you are passing *all* of the arguments to the inner function. There is a more in-depth explanation of how to fix it [on this page](https://facebook.github.io/react/warnings/dont-call-proptypes.html#fixing-the-false-positive-in-third-party-proptypes). Alternatively, you can temporarily keep using `React.PropTypes` until React 16, as it would still only warn in this case.
 
 If you use a bundler like Browserify or Webpack, don’t forget to [follow these instructions](https://facebook.github.io/react/docs/installation.html#development-and-production-versions) to correctly bundle your application in development or production mode. Otherwise you’ll ship unnecessary code to your users.
 
-## Usage
+## PropTypes.checkPropTypes
 
-Refer to the [React documentation](https://facebook.github.io/react/docs/typechecking-with-proptypes.html) for more information.
+React will automatically check the propTypes you set on the component, but if
+you are using PropTypes without React then you may want to manually call
+`PropTypes.checkPropTypes`, like so:
 
-## Migrating from React.PropTypes
+```js
+const myPropTypes = {
+  name: PropTypes.string,
+  age: PropTypes. number,
+  // ... define your prop validations
+};
 
-Check out [Migrating from React.PropTypes](https://facebook.github.io/react/blog/2017/04/07/react-v15.5.0.html#migrating-from-react.proptypes) for details on how to migrate to `prop-types` from `React.PropTypes`.
+const props = {
+  name: 'hello', // is valid
+  age: 'world', // not valid
+};
+
+// Let's say your component is called 'MyComponent'
+
+// Works with standalone PropTypes
+PropTypes.checkPropTypes(myPropTypes, props, 'prop', 'MyComponent');
+// This will warn as follows:
+// Warning: Failed prop type: Invalid prop `age` of type `string` supplied to
+// `MyComponent`, expected `number`.
+```
