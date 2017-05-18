@@ -3,6 +3,11 @@ const passport = require('passport');
 const router = express.Router();
 const validator = require('validator');
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> fbb491a6c325e842ccd12cd97ec0cd31fcdfa77a
 router.post('/signup', (req, res, next) => {
   const validationResult = validateSignupForm(req.body);
   if (!validationResult.success) {

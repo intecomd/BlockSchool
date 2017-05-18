@@ -11,12 +11,15 @@ import SignUpPage from './SignUp/SignUpPage';
 import Auth from './Auth/Auth';
 import Calendar from './Components/Calendar/Calendar';
 import Profile from './Components/Profile/Profile';
+import TakeMoney from './Payments/Checkout';
+import ReferralPage from './Referral/ReferralPage';
 
 ReactDom.render(
   // <Router history={browserHistory} routes={routes} />,
   <Router history={browserHistory} >
     <Route path="" component={NavBar}>
-      <Route path='/' component={LandingPage}>
+      <Route path='/'>
+        <IndexRoute component={LandingPage} />
         <Route path='/app' getComponent={(location, callback) => {
           if (Auth.isUserAuthenticated()) {
             callback(null, App);
@@ -34,6 +37,9 @@ ReactDom.render(
         </Route>
         <Route path='/login' component={LoginPage} />
         <Route path='/signup' component={SignUpPage} />
+        <Route path='/buy' component={TakeMoney} />
+        <Route path='/checkout' component={TakeMoney} />
+        <Route path='/refer' component={ReferralPage} />
         <Route path='/logout' onEnter={(nextState, replace) => {
                 Auth.deauthenticateUser();
 

@@ -1,0 +1,68 @@
+#colorstrip{
+    margin-top: -22px;
+    width: 100%; height: 200px;
+    border-style: solid;
+    border-color: #FFCF00;
+    background-color: #FFCF00;
+}
+
+#position {
+  margin-left: 450px;
+  margin-top: 80px;
+  font-size: 40px;
+}
+
+#fun{
+  color: red;
+}
+
+#code{
+  color: green;
+}
+
+#pay {
+   background: #1898c8;
+   height:55px;
+   width:250px;
+   margin: 500px 700px;
+   position:relative;
+   border-radius: 10px;
+   font-size: 19px;
+}
+
+.box1 {
+    width: 800px;
+    height: 380px;
+    border: 2px solid rgb(0,194,177);
+    padding: 25px;
+    margin: 40px 300px;
+    text-align: center;
+}
+
+.l1 {
+  font-size: 20px;
+}
+
+.l2 {
+  font-size: 20px;
+}
+
+#pn {
+  margin-left: -50px;
+}
+
+#qut {
+  margin-left: 200px;
+}
+
+#pri {
+  margin-left: 200px;
+}
+
+#total {
+  margin-left: 0px;
+}
+
+#totalpri {
+  margin-left: 500px;
+}

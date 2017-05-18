@@ -1,3 +1,41 @@
+.logo {
+    display: inline-block;
+    vertical-align: top;
+    width: 300px;
+    height: 80px;
+    margin-left: 100px;
+    margin-right: 20px;
+    margin-top: 10px;
+    float: left;
+}
+
+.nav-bar {
+  height: 100px;
+}
+
+.container-fluid li a {
+  color: #19C0AF;
+  font-weight: 50px;
+  font-size: 19px;
+  margin-top: 21px;
+  margin-left: 50px;
+}
+
+.left {
+  margin-left: 80px;
+}
+
+.right li a {
+  color: #19C0AF;
+  font-weight: bold;
+  font-size: 19px;
+  margin-top: 21px;
+}
+
+.right {
+  margin-right: 200px;
+}
+
 .center{
     padding-left: 500px;
     text-align:center;
@@ -9,11 +47,4 @@
 .nav a{
     display:inline-block;
     padding:10px;
-}
-.background {
-  background: #555 url(../../public/cover.png);
-  width: 100%;
-  height: 740px;
-  margin-top: 0px;
-
 }

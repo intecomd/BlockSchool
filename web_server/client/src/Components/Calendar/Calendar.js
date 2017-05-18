@@ -97,9 +97,6 @@ class CalendarPage extends React.Component {
           };
           $('#calendar').fullCalendar('renderEvent', eventData);
 
-          console.log(email);
-          console.log(password);
-
           fetch('http://localhost:3000/auth/update', {
             method: 'POST',
             cache: false,
@@ -114,9 +111,6 @@ class CalendarPage extends React.Component {
             })
           }).then(response => {
           });
-
-          console.log('end fetch at calendar');
-
         }
         $('#calendar').fullCalendar('unselect');
       },

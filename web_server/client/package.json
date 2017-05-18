@@ -15,7 +15,9 @@
     "react-dom": "^15.5.4",
     "react-facebook-login": "^3.5.0",
     "react-google-login": "^2.8.9",
-    "react-router": "^3.0.5"
+    "react-router": "^3.0.5",
+    "react-stripe-checkout": "^2.2.5",
+    "react-stripe-elements": "0.0.2"
   },
   "devDependencies": {
     "react-scripts": "0.9.5"

@@ -7,6 +7,10 @@ const SignUpForm = ({
   errors,
   user,
 }) => (
+  <div>
+  <div id="background1">
+  </div>
+  <div className="signup">
   <div className="container">
     <div className="card-panel signup-panel">
       <form className="col s12" action="/" onSubmit={onSubmit}>
@@ -66,6 +70,8 @@ const SignUpForm = ({
         </div>
       </form>
     </div>
+  </div>
+  </div>
   </div>
 );
 

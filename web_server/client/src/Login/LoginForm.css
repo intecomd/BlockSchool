@@ -1,5 +1,8 @@
+.login {
+  margin-top: -580px;
+}
 .login-panel {
-  margin: auto;
+  margin-top: 0px;
   width: 40%;
 }
 
