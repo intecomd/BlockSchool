@@ -13,7 +13,6 @@ class App extends React.Component{
   render() {
     return(
       <div>
-{/*<<<<<<< HEAD*/}
         <div className='row'>
           <div className="col s4">
             <DashBoardPage />
@@ -21,10 +20,6 @@ class App extends React.Component{
           <div className="col s8 center-align">
             {this.props.children}
           </div>
-{/*=======
-        <div className='container'>
-           <LandingPage />
->>>>>>> fbb491a6c325e842ccd12cd97ec0cd31fcdfa77a*/}
         </div>
       </div>
     );

@@ -13,6 +13,7 @@ import Calendar from './Components/Calendar/Calendar';
 import Profile from './Components/Profile/Profile';
 import TakeMoney from './Payments/Checkout';
 import ReferralPage from './Referral/ReferralPage';
+import Price from './Price/Price';
 
 ReactDom.render(
   // <Router history={browserHistory} routes={routes} />,
@@ -37,6 +38,7 @@ ReactDom.render(
         </Route>
         <Route path='/login' component={LoginPage} />
         <Route path='/signup' component={SignUpPage} />
+        <Route path='/price' component={Price} />
         <Route path='/buy' component={TakeMoney} />
         <Route path='/checkout' component={TakeMoney} />
         <Route path='/refer' component={ReferralPage} />
