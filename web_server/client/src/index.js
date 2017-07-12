@@ -12,6 +12,8 @@ import Auth from './Auth/Auth';
 import Calendar from './Components/Calendar/Calendar';
 import Profile from './Components/Profile/Profile';
 import TakeMoney from './Payments/Checkout';
+import TakeMoney1 from './Payments/Checkout1';
+import TakeMoney2 from './Payments/Checkout2';
 import ReferralPage from './Referral/ReferralPage';
 import Price from './Price/Price';
 
@@ -41,6 +43,8 @@ ReactDom.render(
         <Route path='/price' component={Price} />
         <Route path='/buy' component={TakeMoney} />
         <Route path='/checkout' component={TakeMoney} />
+        <Route path='/checkout1' component={TakeMoney1} />
+        <Route path='/checkout2' component={TakeMoney2} />
         <Route path='/refer' component={ReferralPage} />
         <Route path='/logout' onEnter={(nextState, replace) => {
                 Auth.deauthenticateUser();
